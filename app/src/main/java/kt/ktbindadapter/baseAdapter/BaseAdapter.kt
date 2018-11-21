@@ -5,17 +5,12 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import kt.ktbindadapter.BR.item
 
-abstract class BaseAdapter<E : Any, VB : ViewDataBinding> : RecyclerView.Adapter<BindViewHolder<VB>> {
-    internal lateinit var mDatas: MutableList<E>
+abstract class BaseAdapter<E : Any, VB : ViewDataBinding> internal constructor(datas: MutableList<E>) : RecyclerView.Adapter<BindViewHolder<VB>>() {
+    internal var mDatas: MutableList<E> = datas
     internal var itemClickLisener: OnItemClickLisener<E>? = null
     internal var childClickLisener: OnChildClickLisener<E>? = null
     internal var itemLongClickLisener: OnItemLongClickLisener<E>? = null
 
-    internal constructor() {}
-
-    internal constructor(datas: MutableList<E>) {
-        mDatas = datas
-    }
 
     fun setChildClickLisener(function: (E, View, Int) -> Unit) {
         this.childClickLisener = object : OnChildClickLisener<E> {
