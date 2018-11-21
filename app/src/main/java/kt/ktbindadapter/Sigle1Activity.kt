@@ -22,7 +22,7 @@ class Sigle1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sigle1)
-        //最普通的rv,直接创建SimpleAdapter即可,没有item子view的点击事件
+        //最普通的,直接创建SimpleAdapter即可,没有item子view的点击事件
         val testAdapter = SimpleAdapter(listData, R.layout.item_sigle1)
         rv.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         rv.setAdapter(testAdapter)

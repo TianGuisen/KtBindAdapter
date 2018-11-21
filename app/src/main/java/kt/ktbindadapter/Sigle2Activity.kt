@@ -25,7 +25,7 @@ class Sigle2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sigle2)
-        //单type的rv,没有item子view的点击事件,使用只需要创建SimpleAdapter
+        //单type,没有item子view的点击事件,使用只需要创建SimpleAdapter
         val sigle2Adapger= object : BaseSigleAdapter<ItemInfo, ItemSigle2Binding>(listData, R.layout.item_sigle2){
             override fun decorator(bean: ItemInfo, holder: BindViewHolder<ItemSigle2Binding>, position: Int) {
                 holder.binding.run {
