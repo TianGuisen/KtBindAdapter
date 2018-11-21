@@ -1,4 +1,4 @@
-package kt.ktbindadapter.adapter
+package kt.ktbindadapter.baseAdapter
 
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
@@ -6,14 +6,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 
 /**
- * Created by 田桂森 on 2017/4/14.
- * 单type的adapter
+ * 单type
+ * 如果item内容填充较复杂,无法在item的xml中完成,需要在decorator完成填充,就使用这个
+ * 或者需要子view的点击事件使用这个
  */
-open class SigleBaseAdapter<E : Any, VB : ViewDataBinding> : BaseAdapter<E, VB> {
+open abstract class BaseSigleAdapter<E : Any, VB : ViewDataBinding> : BaseAdapter<E, VB> {
 
     private var layoutId: Int = 0
-
-//    private constructor(datas: MutableList<E>) : super(datas) {}
 
     constructor(datas: MutableList<E>, layoutId: Int) : super(datas) {
         this.layoutId = layoutId

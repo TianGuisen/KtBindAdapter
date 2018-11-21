@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".SigleActivity"/>
+        <activity android:name=".Sigle2Activity"/>
+        <activity android:name=".Sigle1Activity"/>
+        <activity android:name=".Multi2Activity"/>
+        <activity android:name=".Multi1Activity"/>
     </application>
 
 </manifest>

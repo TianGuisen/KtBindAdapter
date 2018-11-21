@@ -11,7 +11,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<View>(R.id.tv1).setOnClickListener {
-            MainActivity@this.startActivity(Intent(MainActivity@this,SigleActivity::class.java))
+            MainActivity@ this.startActivity(Intent(MainActivity@ this, Sigle1Activity::class.java))
         }
+        findViewById<View>(R.id.tv2).setOnClickListener {
+            MainActivity@ this.startActivity(Intent(MainActivity@ this, Sigle2Activity::class.java))
+        }
+        findViewById<View>(R.id.tv3).setOnClickListener {
+            MainActivity@ this.startActivity(Intent(MainActivity@ this, Multi1Activity::class.java))
+        }
+        findViewById<View>(R.id.tv4).setOnClickListener {
+            MainActivity@ this.startActivity(Intent(MainActivity@ this, Multi2Activity::class.java))
+        }
+
     }
 }

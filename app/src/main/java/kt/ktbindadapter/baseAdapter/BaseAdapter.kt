@@ -1,4 +1,4 @@
-package kt.ktbindadapter.adapter
+package kt.ktbindadapter.baseAdapter
 
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
@@ -66,13 +66,16 @@ abstract class BaseAdapter<E : Any, VB : ViewDataBinding> : RecyclerView.Adapter
             }
         }
         decorator(bean, holder, position)
-        holder.binding.setVariable(item, mDatas[position])
+        if (mDatas[position] is MultiItem<*>) {
+            val pinnedHeaderEntity = mDatas[position] as MultiItem<*>
+            holder.binding.setVariable(item, pinnedHeaderEntity.data)
+        } else {
+            holder.binding.setVariable(item, mDatas[position])
+        }
         holder.binding.executePendingBindings()
     }
 
-    open fun decorator(bean: E, holder: BindViewHolder<VB>, position: Int) {
-
-    }
+    abstract fun decorator(bean: E, holder: BindViewHolder<VB>, position: Int)
 
     open fun remove(position: Int) {
         mDatas.removeAt(position)
@@ -88,6 +91,4 @@ abstract class BaseAdapter<E : Any, VB : ViewDataBinding> : RecyclerView.Adapter
         return mDatas.size
     }
 
-
-//    inner class BindViewHolder(itemView: View, val binding: VB) : RecyclerView.ViewHolder(itemView)
 }

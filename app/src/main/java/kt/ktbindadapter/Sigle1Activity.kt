@@ -4,12 +4,12 @@ import android.databinding.ObservableArrayList
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
-import android.view.View
-import kotlinx.android.synthetic.main.activity_sigle.*
-import kt.ktbindadapter.adapter.SimpleAdapter
+import kotlinx.android.synthetic.main.activity_sigle1.*
+import kt.ktbindadapter.baseAdapter.SimpleAdapter
 import kt.ktbindadapter.bean.ItemInfo
+import tgs.kttool.util.ToastUtil
 
-class SigleActivity : AppCompatActivity() {
+class Sigle1Activity : AppCompatActivity() {
     val listData = ObservableArrayList<ItemInfo>()
 
     init {
@@ -21,20 +21,14 @@ class SigleActivity : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sigle)
-        //rv
+        setContentView(R.layout.activity_sigle1)
+        //最普通的rv,直接创建SimpleAdapter即可,没有item子view的点击事件
+        val testAdapter = SimpleAdapter(listData, R.layout.item_sigle1)
         rv.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
-        val testAdapter = SimpleAdapter(listData, R.layout.item_sigle)
         rv.setAdapter(testAdapter)
+        
         testAdapter.setOnItemClickLisener { itemInfo, view, i ->
-//            ToastUtil.info("点击的是item" + itemInfo)
-        }
-        testAdapter.setChildClickLisener { itemInfo: ItemInfo?, view: View, i: Int ->
-            if (view.id == R.id.tv_name) {
-//                ToastUtil.success("点击的是子item中的tv_name")
-            } else if (view.id == R.id.tv_age) {
-//                ToastUtil.success("点击的是子item中的tv_age")
-            }
+            ToastUtil.normal("点击的是item" + itemInfo)
         }
     }
 }
