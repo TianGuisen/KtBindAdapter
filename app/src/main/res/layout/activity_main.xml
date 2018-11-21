@@ -41,8 +41,4 @@
         android:textSize="20sp"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="多type的adapter参考了BaseRecyclerViewAdapterHelper实现方式\nhttps://github.com/CymChad/BaseRecyclerViewAdapterHelper"/>
 </LinearLayout>
