@@ -1,4 +1,5 @@
 # KtBindAdapter
+实现比较简单,主要运用了databinding的特性实现
 使用方法
 ```
 //单type,直接创建SimpleAdapter即可,没有item子view的点击事件
@@ -40,3 +41,5 @@ val multiAdapter = object : BaseMultiAdapter<ItemInfo>(itemInfos) {
 multiAdapter.addItemType(TYPE0, R.layout.item_type0)
 multiAdapter.addItemType(TYPE1, R.layout.item_type1)
 ```
+  
+多type的adapter参考了BaseRecyclerViewAdapterHelper实现方式\nhttps://github.com/CymChad/BaseRecyclerViewAdapterHelper
