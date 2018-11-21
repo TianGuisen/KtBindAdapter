@@ -66,6 +66,7 @@ abstract class BaseAdapter<E : Any, VB : ViewDataBinding> : RecyclerView.Adapter
             }
         }
         decorator(bean, holder, position)
+        //如果是BaseMultiAdapter需要处理一下
         if (mDatas[position] is MultiItem<*>) {
             val pinnedHeaderEntity = mDatas[position] as MultiItem<*>
             holder.binding.setVariable(item, pinnedHeaderEntity.data)
