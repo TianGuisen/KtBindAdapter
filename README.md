@@ -51,4 +51,4 @@ multiAdapter.addItemType(TYPE0, R.layout.item_type0)
 multiAdapter.addItemType(TYPE1, R.layout.item_type1)
 ```
   
-多type的adapter参考了BaseRecyclerViewAdapterHelper实现方式\nhttps://github.com/CymChad/BaseRecyclerViewAdapterHelper
+多type的adapter参考了BaseRecyclerViewAdapterHelper实现方式https://github.com/CymChad/BaseRecyclerViewAdapterHelper
