@@ -16,7 +16,8 @@ implementation 'com.github.TianGuisen:KtBindAdapter:Tag'
 }
 ```
 -------
-item布局中必须这样写,name="item",否则baseAdapter中BR.item会报错无法使用
+##### item布局
+所有item布局中name必须相同,推荐name="item"
 ```
 <data>
         <variable
