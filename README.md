@@ -13,7 +13,7 @@ allprojects {
 ```
 ```
 dependencies {
-implementation 'com.github.TianGuisen:KtBindAdapter:1.0'
+	implementation 'com.github.TianGuisen:KtBindAdapter:1.1'
 }
 ```
 -------
