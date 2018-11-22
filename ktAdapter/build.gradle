@@ -11,8 +11,6 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
     }
     dataBinding {
         enabled = true
@@ -24,5 +22,5 @@ dependencies {
 
 
     api 'com.android.support:recyclerview-v7:27.1.1'
-    api project(path: ':ktTool')
+
 }
