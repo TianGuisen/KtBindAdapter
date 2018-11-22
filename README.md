@@ -1,17 +1,21 @@
 # KtBindAdapter
 实现比较简单,主要运用了databinding的特性实现  
-使用方法    
+###使用方法    
+#####添加依赖
 ```
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
-        	dependencies {
-	        implementation 'com.github.TianGuisen:KtBindAdapter:Tag'
-	}
+}
 ```
+```
+dependencies {
+implementation 'com.github.TianGuisen:KtBindAdapter:Tag'
+}
+```
+-------
 item布局中必须这样写,name="item",否则baseAdapter中BR.item会报错无法使用
 ```
 <data>
