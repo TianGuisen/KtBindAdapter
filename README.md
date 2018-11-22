@@ -1,7 +1,23 @@
 # KtBindAdapter
 实现比较简单,主要运用了databinding的特性实现  
-使用方法    
-item布局中必须这样写,name="item",否则baseAdapter中BR.item会报错无法使用
+### 使用方法    
+##### 添加依赖
+```
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+```
+dependencies {
+implementation 'com.github.TianGuisen:KtBindAdapter:Tag'
+}
+```
+-------
+##### item布局
+所有item布局中name必须相同,推荐name="item"
 ```
 <data>
         <variable
@@ -9,7 +25,7 @@ item布局中必须这样写,name="item",否则baseAdapter中BR.item会报错无
             type="绑定的实体类"></variable>
 </data>
 ```
-创建adapter
+##### 创建adapter
 ```
 //单type,直接创建SimpleAdapter即可,没有item子view的点击事件
 val testAdapter = SimpleAdapter(listData, R.layout.item_sigle1)
