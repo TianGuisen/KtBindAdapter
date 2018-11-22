@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
 import kotlinx.android.synthetic.main.activity_sigle1.*
-import kt.ktbindadapter.baseAdapter.SimpleAdapter
+import tgs.adapter.SimpleAdapter
 import kt.ktbindadapter.bean.ItemInfo
 import tgs.kttool.util.ToastUtil
 

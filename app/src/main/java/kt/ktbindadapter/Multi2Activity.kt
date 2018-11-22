@@ -6,11 +6,11 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
 import android.view.View
 import kotlinx.android.synthetic.main.activity_sigle1.*
-import kt.ktbindadapter.baseAdapter.BaseMultiAdapter
 import kt.ktbindadapter.baseAdapter.BindViewHolder
-import kt.ktbindadapter.baseAdapter.MultiItem
 import kt.ktbindadapter.bean.ItemInfo
 import kt.ktbindadapter.databinding.ItemType1Binding
+import tgs.adapter.BaseMultiAdapter
+import tgs.adapter.MultiItem
 import tgs.kttool.util.ToastUtil
 
 class Multi2Activity : AppCompatActivity() {

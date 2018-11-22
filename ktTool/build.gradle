@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+    androidExtensions {
+        experimental = true
+    }
+}
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+    }
+
+}
+
+dependencies {
+    //log日志
+    api 'com.orhanobut:logger:2.2.0'
+}

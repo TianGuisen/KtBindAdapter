@@ -1,4 +1,4 @@
-package kt.ktbindadapter.baseAdapter
+package tgs.adapter
 
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
@@ -6,6 +6,7 @@ import android.support.annotation.LayoutRes
 import android.util.SparseIntArray
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import kt.ktbindadapter.baseAdapter.BindViewHolder
 
 /**
  * 多type

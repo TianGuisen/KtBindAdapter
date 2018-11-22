@@ -1,6 +1,7 @@
-package kt.ktbindadapter.baseAdapter
+package tgs.adapter
 
 import android.databinding.ViewDataBinding
+import kt.ktbindadapter.baseAdapter.BindViewHolder
 
 /**
  * Created by 田桂森 on 2017/8/18.

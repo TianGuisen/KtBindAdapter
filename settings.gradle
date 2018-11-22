@@ -1,1 +1,1 @@
-include ':app', ':kttool'
+include ':app', ':ktTool', ':ktAdapter'

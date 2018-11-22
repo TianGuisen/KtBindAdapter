@@ -1,14 +1,14 @@
-package kt.ktbindadapter.baseAdapter
+package tgs.adapter
 
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import kt.ktbindadapter.BR.item
+import kt.ktbindadapter.baseAdapter.BindViewHolder
 
 abstract class BaseAdapter<E : Any, VB : ViewDataBinding> internal constructor(datas: MutableList<E>) : RecyclerView.Adapter<BindViewHolder<VB>>() {
     internal var mDatas: MutableList<E> = datas
     internal var itemClickLisener: OnItemClickLisener<E>? = null
-    internal var childClickLisener: OnChildClickLisener<E>? = null
+    var childClickLisener: OnChildClickLisener<E>? = null
     internal var itemLongClickLisener: OnItemLongClickLisener<E>? = null
 
 
@@ -64,9 +64,11 @@ abstract class BaseAdapter<E : Any, VB : ViewDataBinding> internal constructor(d
         //如果是BaseMultiAdapter需要处理一下
         if (mDatas[position] is MultiItem<*>) {
             val pinnedHeaderEntity = mDatas[position] as MultiItem<*>
-            holder.binding.setVariable(item, pinnedHeaderEntity.data)
+//          在module中BR.item运行时会报错,但是在app中不会
+//          如果只用一种name,比如item,那么BR.item永远是1
+            holder.binding.setVariable(1, pinnedHeaderEntity.data)
         } else {
-            holder.binding.setVariable(item, mDatas[position])
+            holder.binding.setVariable(1, mDatas[position])
         }
         holder.binding.executePendingBindings()
     }

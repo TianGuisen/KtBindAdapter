@@ -1,4 +1,4 @@
-package kt.ktbindadapter.baseAdapter
+package tgs.adapter
 
 /**
  * 多type的需要用这个包装实体类

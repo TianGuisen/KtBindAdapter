@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
 import android.view.View
 import kotlinx.android.synthetic.main.activity_sigle1.*
-import kt.ktbindadapter.baseAdapter.BaseSigleAdapter
+import tgs.adapter.BaseSigleAdapter
 import kt.ktbindadapter.baseAdapter.BindViewHolder
 import kt.ktbindadapter.bean.ItemInfo
 import kt.ktbindadapter.databinding.ItemSigle2Binding
