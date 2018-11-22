@@ -13,6 +13,10 @@ item布局中必须这样写,name="item",否则baseAdapter中BR.item会报错无
 ```
 //单type,直接创建SimpleAdapter即可,没有item子view的点击事件
 val testAdapter = SimpleAdapter(listData, R.layout.item_sigle1)
+//点击事件
+testAdapter.setOnItemClickLisener { itemInfo, view, i ->
+      
+}
 ```
 ```
 //单type,没有item子view的点击事件,使用只需要创建SimpleAdapter
