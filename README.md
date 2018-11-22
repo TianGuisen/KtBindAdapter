@@ -13,7 +13,7 @@ allprojects {
 ```
 ```
 dependencies {
-implementation 'com.github.TianGuisen:KtBindAdapter:[![](https://jitpack.io/v/TianGuisen/KtBindAdapter.svg)](https://jitpack.io/#TianGuisen/KtBindAdapter)'
+implementation 'com.github.TianGuisen:KtBindAdapter:1.0'
 }
 ```
 -------
