@@ -18,7 +18,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import kt.ktbindadapter.R
-import tgs.kttool.ToolApplication.Companion.toolAppContext
+import tgs.kttool.ToolApplication.toolAppContext
 
 object ToastUtil {
 

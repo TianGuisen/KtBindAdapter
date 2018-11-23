@@ -7,19 +7,10 @@ import com.orhanobut.logger.PrettyFormatStrategy
 import kt.ktbindadapter.BuildConfig
 
 
-class ToolApplication : Application() {
-    companion object {
-        lateinit var toolAppContext: ToolApplication
-    }
-
-    override fun onCreate() {
-        super.onCreate()
-        toolAppContext = this
-        initLog()
-    }
-
-
-    private fun initLog() {
+object ToolApplication {
+    lateinit var toolAppContext: Application
+    fun init(appContext: Application) {
+        toolAppContext = appContext 
         val strategy = PrettyFormatStrategy.newBuilder()
                 .showThreadInfo(false)  // 是否显示线程信息，默认为ture
                 .methodCount(1)         // 显示的方法行数
@@ -32,5 +23,4 @@ class ToolApplication : Application() {
             }
         })
     }
-
 }
