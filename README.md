@@ -1,7 +1,8 @@
 # KtBindAdapter
 实现比较简单,主要运用了databinding的特性实现  
 ### 使用方法    
-##### 添加依赖
+##### 添加依赖  
+[![](https://jitpack.io/v/TianGuisen/KtBindAdapter.svg)](https://jitpack.io/#TianGuisen/KtBindAdapter)
 ```
 allprojects {
 	repositories {
@@ -12,7 +13,7 @@ allprojects {
 ```
 ```
 dependencies {
-implementation 'com.github.TianGuisen:KtBindAdapter:Tag'
+	implementation 'com.github.TianGuisen:KtBindAdapter:1.1'
 }
 ```
 -------
@@ -23,6 +24,9 @@ implementation 'com.github.TianGuisen:KtBindAdapter:Tag'
         <variable
             name="item"
             type="绑定的实体类"></variable>
+	    <TextView
+            ...
+            android:text="@{item.name}"/>
 </data>
 ```
 ##### 创建adapter
