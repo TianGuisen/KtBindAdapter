@@ -24,6 +24,9 @@ dependencies {
         <variable
             name="item"
             type="绑定的实体类"></variable>
+	    <TextView
+            ...
+            android:text="@{item.name}"/>
 </data>
 ```
 ##### 创建adapter
