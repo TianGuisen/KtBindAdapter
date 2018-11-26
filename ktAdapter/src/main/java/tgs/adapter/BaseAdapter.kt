@@ -6,10 +6,10 @@ import android.view.View
 import kt.ktbindadapter.baseAdapter.BindViewHolder
 
 abstract class BaseAdapter<E : Any, VB : ViewDataBinding> internal constructor(datas: MutableList<E>) : RecyclerView.Adapter<BindViewHolder<VB>>() {
-    internal var mDatas: MutableList<E> = datas
-    internal var itemClickLisener: OnItemClickLisener<E>? = null
+    var mDatas: MutableList<E> = datas
+    var itemClickLisener: OnItemClickLisener<E>? = null
     var childClickLisener: OnChildClickLisener<E>? = null
-    internal var itemLongClickLisener: OnItemLongClickLisener<E>? = null
+    var itemLongClickLisener: OnItemLongClickLisener<E>? = null
 
 
     fun setChildClickLisener(function: (E, View, Int) -> Unit) {
