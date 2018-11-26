@@ -24,7 +24,7 @@ abstract class BaseMultiAdapter<E : Any> : BaseAdapter<MultiItem<E>, ViewDataBin
         return BindViewHolder(binding.root, binding)
     }
 
-    open fun onCreateViewHolderDecorate(view: ViewDataBinding, viewType: Int) {
+    open fun onCreateViewHolderDecorate(binding: ViewDataBinding, viewType: Int) {
 
     }
 
