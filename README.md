@@ -1,5 +1,6 @@
 # KtBindAdapter
-实现比较简单,主要运用了databinding的特性实现  
+实现比较简单,主要运用了databinding的特性实现.
+不建议使用，databinding并不那么美好。
 ### 使用方法    
 ##### 添加依赖  
 [![](https://jitpack.io/v/TianGuisen/KtBindAdapter.svg)](https://jitpack.io/#TianGuisen/KtBindAdapter)
